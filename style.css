@@ -1,0 +1,22 @@
+body { /* modify the body */
+    background-color: rgb(66, 47, 38);
+    color: white; /* changes the default text colour */
+}
+
+.word{ /* creates a new display rule for anything of class word */
+    background-color: white;
+    color: black;
+    padding: 10px; /* adds space insided of the element (the distance between the word and the edge of the box */
+    margin: 5px; /* adds space outside of the element */
+    width: 100px; /* width of the element */
+    text-align: center; /* puts the text in the centre of the element */
+}
+
+.wordContainer { /* makes everything in the specified container a flex box */
+    display: flex;
+    flex-direction: column; /* changes the direction of the flex box */
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* viewport height */
+    gap: 10px; /* tells the container to put this much space between its children  */
+}
