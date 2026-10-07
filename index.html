@@ -4,21 +4,28 @@
     <head> 
         <title>Word Ladder</title> <!-- This is the title of the web bage -->
         <link rel="stylesheet" href="style.css"> <!-- link the CSS file to the HTML file -->
+        
     </head>
 
     <body> <!-- This is what's in the web page -->
-        <h1 id="Title">Word Ladder</h1> <!-- This is a header with the id Title -->
 
-        <p>This is my word ladder game.</p> <!-- This is a paragraph -->
+        <div class="game">
+            <h1>Poople 2</h1> <!-- This is a header of class Title -->
+            <div class="word-container" id="word-container">
+                <div class="word">
+                    <div class="letter">C</div>
+                    <div class="letter">O</div>
+                    <div class="letter">L</div>
+                    <div class="letter">D</div>
+                </div> 
+            </div>
 
-        <button id="testButton" class="word">Hee hee</button> <!-- This is a button refered to as testButton in code, and it displayes the text "hee hee" -->
-        <script src="game.js"></script> <!-- src means source file, and it only recognizes game.js b/c theyre in the same folder, otherwise you'd need to specify the file path -->
+            <input id="word-input" type="text" maxlength="4" pattern="[A-Za-z]*">
+            <button id="submit-button">Submit</button>
 
-        <div class="wordContainer">
-            <div class="word">COLD</div> <!-- This is a generic container of class type 'word' that contains the text "cold"-->
-            <div class="word">CORD</div>
-            <div class="word">CARD</div>
+            <p id = "target-word">Target Word: </p>
+        </div>  
     </body>
 
-    
+<script src="game.js"></script> <!-- src means source file, and it only recognizes game.js b/c theyre in the same folder, otherwise you'd need to specify the file path -->
 </html> <!-- End the file -->
