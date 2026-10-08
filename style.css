@@ -35,7 +35,14 @@ body { /* modify the body */
 
     font-size: 32px;
     font-weight: bold;
+    
+    color: rgb(255, 255, 255);
+}
 
+.letter.correct {
+    background-color: rgb(0, 211, 0);
+}
+
+.letter.wrong {
     background-color: rgb(58, 58, 58);
-    color: rgb(182, 182, 182);
 }
