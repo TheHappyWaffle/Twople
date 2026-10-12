@@ -1,6 +1,7 @@
 body {
     background-color: rgb(71, 43, 16);
     color: white;
+    font-family: "Fredoka", sans-serif;
 }
 
 .game {
@@ -12,7 +13,7 @@ body {
     font-size: 25px;
     max-width: 500px;
     margin: auto;
-    font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", cursive, sans-serif;
+    font-family: "Fredoka", sans-serif;
     text-shadow:
         -1px -1px 0 black,
          1px -1px 0 black,
@@ -30,7 +31,7 @@ body {
     font-weight: bold;
     max-width: 800px;
     margin: auto;
-    font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", cursive, sans-serif;
+    font-family: "Fredoka", sans-serif;
     text-shadow:
         -1px -1px 0 black,
          1px -1px 0 black,
@@ -81,7 +82,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     box-sizing: border-box;
-    font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", cursive, sans-serif;
+    font-family: "Fredoka", sans-serif;
 }
 
 .difficulty-row button:hover {
@@ -203,7 +204,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     box-sizing: border-box;
-    font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", cursive, sans-serif;
+    font-family: "Fredoka", sans-serif;
 }
 
 #word-input {
@@ -231,7 +232,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     box-sizing: border-box;
-    font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", cursive, sans-serif;
+    font-family: "Fredoka", sans-serif;
 }
 
 .input-row button:hover {
