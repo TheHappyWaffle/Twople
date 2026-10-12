@@ -285,17 +285,19 @@ body {
         font-family: "Fredoka", sans-serif;
     }
 
-    .difficulty-row {
+    #start-menu .difficulty-row {
+        display: grid;
+        grid-template-columns: 130px minmax(0, 1fr);
+        align-items: center;
+        column-gap: 14px;
         width: 100%;
         max-width: 360px;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 14px;
+        box-sizing: border-box;
     }
 
     .difficulty-row button {
-        width: 130px;
-        min-width: 130px;
+        width: 115px;
+        min-width: 115px;
         height: 52px;
         font-size: 16px;
         flex-shrink: 0;
