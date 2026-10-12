@@ -1,20 +1,101 @@
-body { /* modify the body */
+body {
     background-color: rgb(71, 43, 16);
-    color: white; /* changes the default text colour */
+    color: white;
 }
 
-
-.game { /* makes everything in the specified container a flex box */
+.game {
     display: flex;
-    flex-direction: column; /* changes the direction of the flex box */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* tells the container to put this much space between its children  */
+    gap: 10px;
     font-size: 25px;
-    font-weight: bold;
     max-width: 500px;
     margin: auto;
     font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", cursive, sans-serif;
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    max-width: 800px;
+    margin: auto;
+    font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", cursive, sans-serif;
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+}
+
+/* Keep the difficulty list centred as one group */
+.difficulty-options {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 340px;
+    max-width: 100%;
+}
+
+/* Give every row the same layout */
+.difficulty-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Keep all buttons exactly the same width */
+.difficulty-row button {
+    width: 110px;
+    min-width: 110px;
+    height: 50px;
+
+    box-sizing: border-box;
+    flex-shrink: 0;
+
+    text-align: center;
+    font-weight: bold;
+    color: white;
+        text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", cursive, sans-serif;
+}
+
+.difficulty-row button:hover {
+    filter: brightness(1.15);
+    transform: scale(1.05);
+}
+
+.difficulty-row button:active {
+    transform: scale(0.95);
+}
+
+/* Keep descriptions aligned and readable */
+.difficulty-row span {
+    text-align: left;
 }
 
 .word {
@@ -28,14 +109,11 @@ body { /* modify the body */
     width: 60px;
     height: 60px;
     border: 2px solid gray;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 32px;
     font-weight: bold;
-    
     color: rgb(255, 255, 255);
 }
 
@@ -45,4 +123,138 @@ body { /* modify the body */
 
 .letter.wrong {
     background-color: rgb(58, 58, 58);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.highlight {
+    color: rgb(4, 240, 4);
+    font-weight: bold;
+}
+
+.yellow {
+    color: rgb(255, 217, 0);
+}
+
+.orange {
+    color: rgb(255, 115, 0);
+}
+
+.red {
+    color: rgb(231, 47, 15);
+}
+
+.easy {
+    background-color: rgb(19, 222, 0);
+}
+
+.medium {
+    background-color: rgb(255, 153, 0);
+}
+
+.hard {
+    background-color: rgb(227, 42, 0);
+}
+
+.hardest {
+    background-color: rgb(127, 0, 0);
+}
+
+#start-menu .difficulty-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#start-menu .difficulty-row {
+    display: grid;
+    grid-template-columns: 110px auto;
+    align-items: center;
+    column-gap: 12px;
+}
+
+#start-menu .difficulty-row button {
+    width: 110px;
+    box-sizing: border-box;
+    justify-self: stretch;
+}
+
+.input-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.submission-box{
+    box-sizing: border-box;
+    flex-shrink: 0;
+    max-width: 75px;
+
+    text-align: center;
+    color: black;
+    background-color: aliceblue;
+
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", cursive, sans-serif;
+}
+
+#word-input {
+    height: 35px;
+    box-sizing: border-box;
+}
+
+.input-row button {
+    height: 35px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+
+    box-sizing: border-box;
+    flex-shrink: 0;
+
+    text-align: center;
+    font-weight: bold;
+        text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", cursive, sans-serif;
+}
+
+.input-row button:hover {
+    filter: brightness(1.15);
+    transform: scale(1.05);
+}
+
+.input-row button:active {
+    transform: scale(0.95);
+}
+
+.submit-button{
+    background-color: rgb(95, 95, 95);
+}
+
+.restart-button{
+    background-color: rgb(67, 120, 42);
+}
+
+.giveup-button{
+    background-color: rgb(148, 0, 0);
+}
+
+.newgame-button {
+    background-color: rgb(12, 181, 0);
 }

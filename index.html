@@ -1,26 +1,65 @@
 <!DOCTYPE html>
-
-<html> <!-- Start the file -->
-    <head> 
-        <title>Poople 2</title> <!-- This is the title of the web bage -->
-        <link rel="stylesheet" href="style.css"> <!-- link the CSS file to the HTML file -->
+<html>
+    <head>
+        <title>Twople</title>
+        <link rel="stylesheet" href="style.css">
     </head>
 
-    <body> <!-- This is what's in the web page -->
+    <body>
+        <div class="menu hidden" id="menu-container">
+            <h1>!!!YOU WIN!!!</h1>
+            <p id="shortest-path"></p>
+            <p id="moves-required"></p>
+            <div class="input-row">
+                <button id="newgame-button" class="newgame-button">New Game</button>
+            </div>
+        </div>
 
-        <div class="game">
-            <h1>Poople 2</h1> <!-- This is a header of class Title -->
-            <p id="error-text"> </p>
+        <div class="menu" id="start-menu">
+            <h1>Twople</h1>
+
+            <div class="difficulty-options">
+                <div class="difficulty-row">
+                    <button id="easy-button" class="easy">EASY</button>
+                    <span>4 - 6 words</span>
+                </div>
+
+                <div class="difficulty-row">
+                    <button id="medium-button" class="medium">MEDIUM</button>
+                    <span>7 - 9 words</span>
+                </div>
+
+                <div class="difficulty-row">
+                    <button id="hard-button" class="hard">HARD</button>
+                    <span>10 - 14 words</span>
+                </div>
+
+                <div class="difficulty-row">
+                    <button id="hardest-button" class="hardest">VERY HARD</button>
+                    <span>17 - 18 words</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game hidden" id="game-container">
+            <h1>Twople</h1>
+
             <div class="word-container" id="word-container">
-
             </div>
 
-            <input id="word-input" type="text" maxlength="4" pattern="[A-Za-z]*">
-            <button id="submit-button">Submit</button>
+            <p id="error-text"></p>
+            <div class="input-row">
+                <input id="word-input" class="submission-box" type="text" maxlength="4" pattern="[A-Za-z]*">
+                <button id="submit-button" class="submit-button">Submit</button>
+            </div>
 
-            <p id = "target-word">Target Word: </p>
-        </div>  
+            <p id="target-word">Target Word:</p>
+            <div class="input-row">
+                <button id="restart-button" class="restart-button">Restart</button>
+                <button id="giveup-button" class="giveup-button">Give Up</button>
+            </div>
+        </div>
     </body>
 
-<script src="game.js"></script> <!-- src means source file, and it only recognizes game.js b/c theyre in the same folder, otherwise you'd need to specify the file path -->
-</html> <!-- End the file -->
+    <script src="game.js"></script>
+</html>
