@@ -261,7 +261,7 @@ restartButton.addEventListener("click", function(){
             word.remove();
         }
     });
-
+    movesTaken = 0;
     oldWord = path[0];
 });
 
